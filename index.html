@@ -1,144 +1,164 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="reset.css">
-    <link rel="stylesheet" href="styles.css">
-    <script src="https://kit.fontawesome.com/9680ed3927.js" crossorigin="anonymous"></script>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="reset.css" />
+    <link rel="stylesheet" href="styles.css" />
+    <script
+      src="https://kit.fontawesome.com/9680ed3927.js"
+      crossorigin="anonymous"
+    ></script>
     <title>Tasks</title>
-</head>
-<body>
+  </head>
+  <body>
     <div class="wrapper">
-        <nav class="navbar-mobile">
-            <ul>
-                <li>
-                    <i class="fa-solid fa-house"></i>
-                    <span>HOME</span>
-                </li>
-                <li>
+      <nav class="navbar-mobile">
+        <ul>
+          <li>
+            <a href="/index.html">
+              <i class="fa-solid fa-house"></i>
+              <span>HOME</span>
+            </a>
+          </li>
+          <li>
+            <a href="/calendar.html">
+              <i class="fa-solid fa-calendar-days"></i>
+              <span>CALENDAR</span>
+            </a>
+          </li>
+          <li>
+            <a href="/profile.html">
+              <i class="fa-solid fa-user"></i>
+              <span>PROFILE</span>
+            </a>
+          </li>
+          <li>
+            <a href="/settings.html">
+              <i class="fa-solid fa-gear"></i>
+              <span>SETTINGS</span>
+            </a>
+          </li>
+          <li>
+            <a href="/search.html">
+              <i class="fa-solid fa-magnifying-glass"></i>
+              <span>SEARCH</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+      <header>
+        <h1>HOME</h1>
+      </header>
+      <section class="progress-section">
+        <div class="progress">
+          <div class="completion-percentage">
+            <span class="amount">60</span>
+            <span class="percent">%</span>
+          </div>
+          <span class="tasks-left">6 / 10</span>
+        </div>
+        <div class="completion-text">
+          <p>Task completion progress</p>
+        </div>
+      </section>
+      <section class="todays-tasks-section">
+        <h3>Todays tasks</h3>
+        <div>
+          <p class="task-status">Incomplete tasks:</p>
+          <div class="tasks-container">
+            <div class="card">
+              <div class="card-upper-section">
+                <div>
+                  <h5 class="card-title">
+                    English homework Lorem ipsum dolor sit amet.
+                  </h5>
+                  <span class="tag">study</span>
+                </div>
+                <div class="card-status-container">
+                  <div class="status-color"></div>
+                  <span class="card-status">Incomplete</span>
+                </div>
+              </div>
+              <div class="card-lower-section">
+                <div class="due-date-container">
+                  <p>Due date:</p>
+                  <div class="date">
                     <i class="fa-solid fa-calendar-days"></i>
-                    <span>CALENDAR</span>
-                </li>
-                <li>
-                    <i class="fa-solid fa-user"></i>
-                    <span>PROFILE</span>
-                </li>
-                <li>
-                    <i class="fa-solid fa-gear"></i>
-                    <span>SETTINGS</span>
-                </li>
-                <li>
-                    <i class="fa-solid fa-magnifying-glass"></i>
-                    <span>SEARCH</span>
-                </li>
-            </ul>
-        </nav>
-        <header>
-            <h1>HOME</h1>
-        </header>
-        <section class="progress-section">
-            <div class="progress">
-                <div class="completion-percentage">
-                    <span class="amount">60</span>
-                    <span class="percent">%</span>
+                    <span>23.9.25</span>
+                  </div>
+                  <div class="time">
+                    <i class="fa-regular fa-clock"></i>
+                    <span>12.00-13.00</span>
+                  </div>
                 </div>
-                <span class="tasks-left">6 / 10</span>
+                <button class="mark-as-complete-btn">
+                  <i class="fa-solid fa-check"></i>
+                </button>
+              </div>
             </div>
-            <div class="completion-text">
-                <p>Task completion progress</p>
-            </div>
-        </section>
-        <section class="todays-tasks-section">
-            <h3>Todays tasks</h3>
-            <div>
-                <p class="task-status">Incomplete tasks:</p>
-                <div class="tasks-container">
-                    <div class="card">
-                        <div class="card-upper-section">
-                            <div>
-                                <h5 class="card-title">English homework Lorem ipsum dolor sit amet.</h5>
-                                <span class="tag">study</span>
-                            </div>
-                            <div class="card-status-container">
-                                <div class="status-color"></div>
-                                <span class="card-status">Incomplete</span>
-                            </div>
-                        </div>
-                        <div class="card-lower-section">
-                            <div class="due-date-container">
-                                <p>Due date:</p>
-                                <div class="date">
-                                    <i class="fa-solid fa-calendar-days"></i>
-                                    <span>23.9.25</span>
-                                </div>
-                                <div class="time">
-                                    <i class="fa-regular fa-clock"></i>
-                                    <span>12.00-13.00</span>
-                                </div>
-                            </div>
-                            <button class="mark-as-complete-btn"><i class="fa-solid fa-check"></i></button>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div class="card-upper-section">
-                            <div>
-                                <h5 class="card-title">English homework Lorem ipsum dolor sit amet.</h5>
-                                <span class="tag">study</span>
-                            </div>
-                            <div class="card-status-container">
-                                <div class="status-color"></div>
-                                <span class="card-status">Incomplete</span>
-                            </div>
-                        </div>
-                        <div class="card-lower-section">
-                            <div class="due-date-container">
-                                <p>Due date:</p>
-                                <div class="date">
-                                    <i class="fa-solid fa-calendar-days"></i>
-                                    <span>23.9.25</span>
-                                </div>
-                                <div class="time">
-                                    <i class="fa-regular fa-clock"></i>
-                                    <span>12.00-13.00</span>
-                                </div>
-                            </div>
-                            <button class="mark-as-complete-btn"><i class="fa-solid fa-check"></i></button>
-                        </div>
-                    </div>
+            <div class="card">
+              <div class="card-upper-section">
+                <div>
+                  <h5 class="card-title">
+                    English homework Lorem ipsum dolor sit amet.
+                  </h5>
+                  <span class="tag">study</span>
                 </div>
-                <p class="task-status-completed">Completed tasks:</p>
-                <div class="tasks-container">
-                
-                    <div class="card">
-                        <div class="card-upper-section">
-                            <div>
-                                <h5 class="card-title">UX & UI design homework</h5>
-                                <span class="tag">study</span>
-                            </div>
-                            <div class="card-status-container">
-                                <div class="status-color-completed"></div>
-                                <span class="card-status">Completed</span>
-                            </div>
-                        </div>
-                       <div class="extra-div"></div>
-                    </div>
-                    <div class="card">
-                        <div class="card-upper-section">
-                            <div>
-                                <h5 class="card-title">UX & UI design homework</h5>
-                                <span class="tag">study</span>
-                            </div>
-                            <div class="card-status-container">
-                                <div class="status-color-completed"></div>
-                                <span class="card-status">Completed</span>
-                            </div>
-                        </div>
-                       <div class="extra-div"></div>
-                    </div>
+                <div class="card-status-container">
+                  <div class="status-color"></div>
+                  <span class="card-status">Incomplete</span>
                 </div>
+              </div>
+              <div class="card-lower-section">
+                <div class="due-date-container">
+                  <p>Due date:</p>
+                  <div class="date">
+                    <i class="fa-solid fa-calendar-days"></i>
+                    <span>23.9.25</span>
+                  </div>
+                  <div class="time">
+                    <i class="fa-regular fa-clock"></i>
+                    <span>12.00-13.00</span>
+                  </div>
+                </div>
+                <button class="mark-as-complete-btn">
+                  <i class="fa-solid fa-check"></i>
+                </button>
+              </div>
             </div>
-        </section>
+          </div>
+          <p class="task-status-completed">Completed tasks:</p>
+          <div class="tasks-container">
+            <div class="card">
+              <div class="card-upper-section">
+                <div>
+                  <h5 class="card-title">UX & UI design homework</h5>
+                  <span class="tag">study</span>
+                </div>
+                <div class="card-status-container">
+                  <div class="status-color-completed"></div>
+                  <span class="card-status">Completed</span>
+                </div>
+              </div>
+              <div class="extra-div"></div>
+            </div>
+            <div class="card">
+              <div class="card-upper-section">
+                <div>
+                  <h5 class="card-title">UX & UI design homework</h5>
+                  <span class="tag">study</span>
+                </div>
+                <div class="card-status-container">
+                  <div class="status-color-completed"></div>
+                  <span class="card-status">Completed</span>
+                </div>
+              </div>
+              <div class="extra-div"></div>
+            </div>
+          </div>
+        </div>
+      </section>
     </div>
-</body>
+  </body>
 </html>

@@ -1,0 +1,356 @@
+
+
+html {
+    font-size: 62.5%;
+    font-family: sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    background-color: #d1f7c2;
+    padding-bottom: 10rem;
+}
+
+.wrapper {
+    min-height: 100vh;
+    padding-inline: 1rem;
+}
+
+
+/* navbar */
+
+.navbar-mobile {
+    background-color: pink;
+    padding-block: 1.2rem;
+    padding-inline: 1rem;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    box-sizing: border-box;
+}
+.navbar-mobile > ul {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}
+.navbar-mobile > ul > li {
+    display: flex;
+    flex-direction: column;
+    font-size: 1.8rem;
+    text-align: center;
+    gap: 0.6rem;
+}
+.navbar-mobile > ul > li > span {
+
+    font-size: 1rem;
+
+}
+
+/* Header */
+
+header > h1 {
+    font-size: 2.4rem;
+    font-weight: bold;
+    text-align: center;
+    padding-top: 3rem;
+}
+
+/* progress section */
+
+.progress-section {
+
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1.2rem;
+    margin-top: 2rem;
+}
+
+.progress {
+    width: 192px;
+    height: 161px;
+    background-color: white;
+    border-radius: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top: 1.4rem;
+    position: relative;
+}
+
+.completion-percentage {
+    margin-top: -1rem;
+}
+
+.completion-percentage > .amount {
+    font-size: 4.2rem;
+    padding-left: 1.5rem;
+}
+.completion-percentage > .percent {
+    font-size: 1.8rem;
+
+}
+
+.tasks-left {
+    font-size: 1.6rem;
+    position: absolute;
+    bottom: 2.4rem;
+    font-weight: bolder;
+
+}
+
+
+.completion-text {
+    font-size: 1.6rem;
+    margin-top: 0.4rem;
+}
+
+
+/* todays tasks section */
+
+.todays-tasks-section {
+    margin-top: 4rem;
+}
+
+.todays-tasks-section h3 {
+    font-size: 2rem;
+    margin-bottom: 2.2rem;
+}
+
+
+.task-status {
+    font-size: 1.4rem;
+    margin-bottom: 1.4rem;
+    font-weight: bold;
+}
+.task-status-completed {
+    font-size: 1.4rem;
+    margin-bottom: 1.4rem;
+    margin-top: 1.4rem;
+    font-weight: bold;
+}
+
+.card {
+    display: grid;
+    background-color: white;
+    padding-block: 1rem;
+    padding-inline: 1.2rem;
+    border-radius: 0.8rem;
+    border: 1px solid rgb(226, 225, 225);
+}
+
+.card-upper-section {
+    display: flex;
+    justify-content: space-between;
+}
+
+.card-title {
+    font-size: 1.6rem;
+    margin-bottom: 1rem;
+    width: 260px;
+    line-height: 2rem;
+}
+
+.tag {
+    font-size: 1.2rem;
+    background-color: blueviolet;
+    padding: 0.2rem 0.8rem;
+    border-radius: 1.2rem;
+    color: white;
+}
+
+
+.card-status-container {
+    display: flex;
+    margin-top: 0.3rem;
+    font-size: 1.1rem;
+}
+
+.status-color {
+    background-color: red;
+    width: 1rem;
+    height: 1rem;
+    border-radius: 100%;
+    margin-right:0.4rem;
+    margin-top: 0.1rem;
+}
+.status-color-completed {
+    background-color: green;
+    width: 1rem;
+    height: 1rem;
+    border-radius: 100%;
+    margin-right:0.4rem;
+    margin-top: 0.1rem;
+}
+
+.card-lower-section {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1.6rem;
+}
+
+.due-date-container {
+    display: flex;
+    align-items: center;
+    font-size: 1.4rem;
+    gap: 1rem;
+}
+
+.date > i {
+    padding-right: 0.2rem;
+}
+
+
+
+.mark-as-complete-btn {
+    background-color: aquamarine;
+    border: none;
+    padding: 1rem 1.6rem;
+    border-radius: 1rem;
+    box-shadow: 0.5px 0.5px 4px rgb(105, 105, 105);
+}
+
+.tasks-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.2rem;    
+}
+
+.extra-div {
+    width: 100%;
+    height: 20px;
+    padding: 0.5rem;
+}
+
+
+/* Calendar */
+
+.calendar-section {
+    margin-top: 3rem;
+}
+
+.calendar {
+    background-color: white;
+    padding-inline: 1rem;
+    padding-bottom: 2rem;
+    padding-top: 0.5rem;
+}
+
+.calendar h2 {
+  text-align: center;
+  font-size: 1.6rem;
+  font-style: italic;
+}
+
+.calendar-month-selection {
+    display: flex;
+    gap: 2rem;
+    font-size: 1.4rem;
+    justify-content: end;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.calendar-month-selection > span {
+    font-weight: bold;
+}
+
+.calendar-month-selection > i {
+    background-color: white;
+    padding: 1rem 1.2rem;
+    border-radius: 0.8rem;
+}
+
+
+.calendar .weekdays {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  text-align: center;
+  margin-block-start: 1.8rem;
+  font-size: 1.4rem;
+}
+
+.calendar-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  grid-auto-rows: 37px;
+  margin-block-start: 1rem;
+  align-items: stretch;
+  justify-content: center;
+  text-align: center;
+  gap: 0.5rem;
+}
+
+.calendar .previous-day {
+  background-color: white;
+  border: none;
+  opacity: 0.2;
+}
+
+.calendar .next-day {
+  background-color: white;
+  border: none;
+  opacity: 0.2;
+}
+
+.calendar-grid div {
+  background-color: #dbc3f7;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.1s linear;
+  border-radius: 8px;
+}
+
+
+.calendar-grid a {
+  text-decoration: none;
+  color: black;
+  font-size: 1.4rem;
+}
+
+.calendar .marked {
+  background-color: rgb(15, 15, 15);
+  padding: 1rem;
+  border-radius: 50%;
+  color: white;
+}
+
+.calendar .important a {
+  position: relative;
+}
+
+.calendar .important a::after {
+  content: "";
+  position: absolute;
+  top: 16px;
+  right: 6px;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: #e73a06;
+}
+
+.calendar-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+}
+.calendar-header h3 {
+    margin-bottom: 0;
+    background-color: white;
+    padding: 0.8rem 1rem;
+    border-radius: 0.8rem;
+}
+.calendar-header i {
+    font-size: 2rem;
+    background-color: white;
+    padding: 1rem 1.2rem;
+    border-radius: 0.8rem;
+}
+

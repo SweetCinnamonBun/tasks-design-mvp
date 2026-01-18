@@ -1,249 +1,311 @@
-
-
 html {
-    font-size: 62.5%;
-    font-family: sans-serif;
+  font-size: 62.5%;
+  font-family: sans-serif;
 }
 
 body {
-    min-height: 100vh;
-    background-color: #d1f7c2;
-    padding-bottom: 10rem;
+  min-height: 100vh;
+  background-color: #d1f7c2;
+  padding-bottom: 16rem;
 }
 
 .wrapper {
-    min-height: 100vh;
-    padding-inline: 1rem;
+  min-height: 100vh;
+  padding-inline: 1rem;
 }
 
+.overlay {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.555);
+  z-index: 20;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+}
+
+.search-modal {
+  background-color: white;
+  height: 94%;
+  border-top-left-radius: 1.4rem;
+  border-top-right-radius: 1.4rem;
+  padding-inline: 1.4rem;
+}
+
+.close-btn {
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+  font-size: 2rem;
+  text-align: end;
+  padding-right: 2rem;
+}
+
+.close-btn > a {
+    text-decoration: none;
+    color: black;
+}
+
+.search-container {
+    position: relative;
+}
+.search-container > input {
+    width: 100%;
+    padding: 1.6rem;
+    padding-inline: 4rem 2rem;
+    border-radius: 2.4rem;
+    border: none;
+    border: 1px solid gray;
+}
+
+
+.search-container > i {
+    position: absolute;
+    left: 1.4rem;
+    top: 32%;
+    pointer-events: none; 
+    font-size: 1.4rem;
+
+}
+
+.results {
+    
+    height: 85%;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.results > * {
+    background-color: white;
+    font-size: 1.8rem;
+    padding: 2rem;
+    border-radius: 1.2rem;
+    box-shadow: 1px 1px 3px black;
+}
+.result:nth-child(even) {
+    background-color: #d6ccfa;
+    font-size: 1.8rem;
+    padding: 2rem;
+    border-radius: 1.2rem;
+}
 
 /* navbar */
 
 .navbar-mobile {
-    background-color: whitesmoke;
-    padding-block: 1.2rem;
-    padding-inline: 1rem;
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    box-sizing: border-box;
+  background-color: whitesmoke;
+  padding-block: 1.2rem;
+  padding-inline: 1rem;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  box-sizing: border-box;
 }
 .navbar-mobile > ul {
-    display: flex;
-    justify-content: space-around;
-    width: 100%;
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
 }
 .navbar-mobile > ul > li > a {
-    display: flex;
-    flex-direction: column;
-    font-size: 1.8rem;
-    text-align: center;
-    gap: 0.6rem;
-    text-decoration: none;
-    color: black;
+  display: flex;
+  flex-direction: column;
+  font-size: 1.8rem;
+  text-align: center;
+  gap: 0.6rem;
+  text-decoration: none;
+  color: black;
 }
 .navbar-mobile > ul > li > a > span {
-
-    font-size: 1rem;
-
+  font-size: 1rem;
 }
 
 /* Header */
 
 header {
-    position: relative;
+  position: relative;
 }
 
 header > h1 {
-    font-size: 2.4rem;
-    font-weight: bold;
-    text-align: center;
-    padding-top: 3rem;
+  font-size: 2.4rem;
+  font-weight: bold;
+  text-align: center;
+  padding-top: 3rem;
 }
 
 /* progress section */
 
 .progress-section {
-
-    height: 200px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 1.2rem;
-    margin-top: 2rem;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1.2rem;
+  margin-top: 2rem;
 }
 
 .progress {
-    width: 192px;
-    height: 161px;
-    background-color: white;
-    border-radius: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding-top: 1.4rem;
-    position: relative;
+  width: 192px;
+  height: 161px;
+  background-color: white;
+  border-radius: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-top: 1.4rem;
+  position: relative;
 }
 
 .completion-percentage {
-    margin-top: -1rem;
+  margin-top: -1rem;
 }
 
 .completion-percentage > .amount {
-    font-size: 4.2rem;
-    padding-left: 1.5rem;
+  font-size: 4.2rem;
+  padding-left: 1.5rem;
 }
 .completion-percentage > .percent {
-    font-size: 1.8rem;
-
+  font-size: 1.8rem;
 }
 
 .tasks-left {
-    font-size: 1.6rem;
-    position: absolute;
-    bottom: 2.4rem;
-    font-weight: bolder;
-
+  font-size: 1.6rem;
+  position: absolute;
+  bottom: 2.4rem;
+  font-weight: bolder;
 }
-
 
 .completion-text {
-    font-size: 1.6rem;
-    margin-top: 0.4rem;
+  font-size: 1.6rem;
+  margin-top: 0.4rem;
 }
-
 
 /* todays tasks section */
 
 .todays-tasks-section {
-    margin-top: 4rem;
+  margin-top: 4rem;
 }
 
 .todays-tasks-section h3 {
-    font-size: 2rem;
-    margin-bottom: 2.2rem;
+  font-size: 2rem;
+  margin-bottom: 2.2rem;
 }
-
 
 .task-status {
-    font-size: 1.4rem;
-    margin-bottom: 1.4rem;
-    font-weight: bold;
+  font-size: 1.4rem;
+  margin-bottom: 1.4rem;
+  font-weight: bold;
 }
 .task-status-completed {
-    font-size: 1.4rem;
-    margin-bottom: 1.4rem;
-    margin-top: 1.4rem;
-    font-weight: bold;
+  font-size: 1.4rem;
+  margin-bottom: 1.4rem;
+  margin-top: 1.4rem;
+  font-weight: bold;
 }
 
 .card {
-    display: grid;
-    background-color: white;
-    padding-block: 1rem;
-    padding-inline: 1.2rem;
-    border-radius: 0.8rem;
-    border: 1px solid rgb(226, 225, 225);
+  display: grid;
+  background-color: white;
+  padding-block: 1rem;
+  padding-inline: 1.2rem;
+  border-radius: 0.8rem;
+  border: 1px solid rgb(226, 225, 225);
 }
 
 .card-upper-section {
-    display: flex;
-    justify-content: space-between;
+  display: flex;
+  justify-content: space-between;
 }
 
 .card-title {
-    font-size: 1.6rem;
-    margin-bottom: 1rem;
-    width: 260px;
-    line-height: 2rem;
+  font-size: 1.6rem;
+  margin-bottom: 1rem;
+  width: 260px;
+  line-height: 2rem;
 }
 
 .tag {
-    font-size: 1.2rem;
-    background-color: rgb(198, 145, 248);
-    padding: 0.2rem 0.8rem;
-    border-radius: 1.2rem;
-    color: white;
+  font-size: 1.2rem;
+  background-color: rgb(168, 126, 245);
+  padding: 0.2rem 0.8rem;
+  border-radius: 1.2rem;
+  color: white;
 }
 
-
 .card-status-container {
-    display: flex;
-    margin-top: 0.3rem;
-    font-size: 1.1rem;
+  display: flex;
+  margin-top: 0.3rem;
+  font-size: 1.1rem;
 }
 
 .status-color {
-    background-color: red;
-    width: 1rem;
-    height: 1rem;
-    border-radius: 100%;
-    margin-right:0.4rem;
-    margin-top: 0.1rem;
+  background-color: red;
+  width: 1rem;
+  height: 1rem;
+  border-radius: 100%;
+  margin-right: 0.4rem;
+  margin-top: 0.1rem;
 }
 .status-color-completed {
-    background-color: green;
-    width: 1rem;
-    height: 1rem;
-    border-radius: 100%;
-    margin-right:0.4rem;
-    margin-top: 0.1rem;
+  background-color: green;
+  width: 1rem;
+  height: 1rem;
+  border-radius: 100%;
+  margin-right: 0.4rem;
+  margin-top: 0.1rem;
 }
 
 .card-lower-section {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 1.6rem;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1.6rem;
 }
 
 .due-date-container {
-    display: flex;
-    align-items: center;
-    font-size: 1.4rem;
-    gap: 1rem;
+  display: flex;
+  align-items: center;
+  font-size: 1.4rem;
+  gap: 1rem;
 }
 
 .date > i {
-    padding-right: 0.2rem;
+  padding-right: 0.2rem;
 }
 
-
-
 .mark-as-complete-btn {
-    background-color: aquamarine;
-    border: none;
-    padding: 1rem 1.6rem;
-    border-radius: 1rem;
-    box-shadow: 0.5px 0.5px 4px rgb(105, 105, 105);
+  background-color: #5b23ff;
+  border: none;
+  padding: 1rem 1.2rem;
+  border-radius: 100%;
+  box-shadow: 0.5px 0.5px 4px rgb(105, 105, 105);
+  color: white;
 }
 
 .tasks-container {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 1.2rem;    
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.2rem;
 }
 
 .extra-div {
-    width: 100%;
-    height: 20px;
-    padding: 0.5rem;
+  width: 100%;
+  height: 20px;
+  padding: 0.5rem;
 }
-
 
 /* Calendar */
 
 .calendar-section {
-    margin-top: 3rem;
+  margin-top: 3rem;
 }
 
 .calendar {
-    background-color: white;
-    padding-inline: 1rem;
-    padding-bottom: 2rem;
-    padding-top: 0.5rem;
+  background-color: white;
+  padding-inline: 1rem;
+  padding-bottom: 2rem;
+  padding-top: 0.5rem;
 }
 
 .calendar h2 {
@@ -253,24 +315,23 @@ header > h1 {
 }
 
 .calendar-month-selection {
-    display: flex;
-    gap: 2rem;
-    font-size: 1.4rem;
-    justify-content: end;
-    align-items: center;
-    margin-bottom: 1rem;
+  display: flex;
+  gap: 2rem;
+  font-size: 1.4rem;
+  justify-content: end;
+  align-items: center;
+  margin-bottom: 1rem;
 }
 
 .calendar-month-selection > span {
-    font-weight: bold;
+  font-weight: bold;
 }
 
 .calendar-month-selection > i {
-    background-color: white;
-    padding: 1rem 1.2rem;
-    border-radius: 0.8rem;
+  background-color: white;
+  padding: 1rem 1.2rem;
+  border-radius: 0.8rem;
 }
-
 
 .calendar .weekdays {
   display: grid;
@@ -312,7 +373,6 @@ header > h1 {
   border-radius: 8px;
 }
 
-
 .calendar-grid a {
   text-decoration: none;
   color: black;
@@ -342,28 +402,247 @@ header > h1 {
 }
 
 .calendar-header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-bottom: 1.6rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.6rem;
 }
 .calendar-header h3 {
-    margin-bottom: 0;
-    background-color: white;
-    padding: 0.8rem 1rem;
-    border-radius: 0.8rem;
+  margin-bottom: 0;
+  background-color: white;
+  padding: 0.8rem 1rem;
+  border-radius: 0.8rem;
 }
 .calendar-header i {
-    font-size: 2rem;
-    background-color: white;
-    padding: 1rem 1.2rem;
-    border-radius: 0.8rem;
+  font-size: 2rem;
+  background-color: white;
+  padding: 1rem 1.2rem;
+  border-radius: 0.8rem;
 }
 
 .go-back {
-    text-decoration: none;
-    position: absolute;
-    top: 68%;
-    font-size: 1.3rem;
-    color: black;
+  text-decoration: none;
+  position: absolute;
+  top: 68%;
+  font-size: 1.3rem;
+  color: black;
+}
+.go-back-task {
+  text-decoration: none;
+  font-size: 1.4rem;
+  color: black;
+}
+
+/* Task section */
+
+.task-title {
+  font-size: 2.4rem;
+  margin-block: 2.6rem;
+}
+
+.task-header {
+  margin-bottom: 1.8rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 2rem;
+}
+
+.save-button {
+  font-size: 1.4rem;
+  padding: 0.8rem 1.8rem;
+  border: none;
+  background-color: #5b23ff;
+  color: white;
+  border-radius: 0.8rem;
+}
+.save-button > i {
+  padding-right: 0.6rem;
+}
+
+.tag-text {
+  font-size: 1.6rem;
+  background-color: white;
+  padding: 0.4rem 1.2rem;
+  border-radius: 0.8rem;
+  margin-right: 0.8rem;
+}
+
+.due-date-container-task {
+  display: flex;
+  align-items: center;
+  font-size: 1.6rem;
+  gap: 1rem;
+  margin-block: 1rem;
+}
+
+.due-date-text {
+  font-size: 1.6rem;
+  background-color: white;
+  padding: 0.4rem 1.2rem;
+  border-radius: 0.8rem;
+}
+
+.basic-info {
+  margin-bottom: 2.9rem;
+}
+
+.task-text {
+  min-height: 390px;
+  background-color: white;
+  border-radius: 0.8rem;
+  margin-top: 2.4rem;
+  padding: 1.4rem;
+  font-size: 1.6rem;
+  line-height: 2.2rem;
+}
+
+.task-buttons-section {
+  margin-top: 2.4rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.delete-button {
+  background-color: rgb(248, 111, 111);
+  border: none;
+  padding: 0.8rem 1.2rem;
+  font-size: 1.6rem;
+  border-radius: 0.8rem;
+}
+
+.complete-button {
+  border: none;
+  padding: 0.8rem 1.4rem;
+  background-color: #5b23ff;
+  border-radius: 0.8rem;
+  color: white;
+}
+
+.complete-button > i {
+  padding-right: 0.2rem;
+}
+
+.status-container {
+  font-size: 1.6rem;
+  margin-top: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+.status-text {
+  font-size: 1.6rem;
+  background-color: white;
+  padding: 0.4rem 1.2rem;
+  border-radius: 0.8rem;
+}
+
+/* Create new task */
+
+.basic-info-selection {
+}
+.basic-info-selection > * {
+  margin-block: 1.7rem;
+}
+
+.new-task-title {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 1.4rem;
+  border-radius: 0.8rem;
+  border: none;
+}
+
+.new-task-title::placeholder {
+  color: black;
+}
+
+.due-date-selection {
+  font-size: 1.6rem;
+}
+
+.due-date-selection span {
+  background-color: white;
+  padding: 0.8rem 1.2rem;
+  border-radius: 0.8rem;
+}
+
+.due-date-selection > button {
+  font-size: 1.6rem;
+  padding: 0.8rem 1.2rem;
+  border: none;
+  background-color: #5b23ff;
+  color: white;
+  border-radius: 0.8rem;
+}
+
+.tag-selection {
+  font-size: 1.6rem;
+}
+.tag-selection > span {
+  background-color: white;
+  padding: 0.8rem 1.2rem;
+  border-radius: 0.8rem;
+  margin-left: 0.6rem;
+}
+.tag-selection > button {
+  font-size: 1.6rem;
+  padding: 0.8rem 1.2rem;
+  border: none;
+  background-color: #5b23ff;
+  color: white;
+  border-radius: 0.8rem;
+}
+
+.new-task-buttons-section {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: end;
+  gap: 2rem;
+  width: 100%;
+}
+.new-task-buttons-section > button {
+  border: none;
+  padding: 0.8rem 1.4rem;
+  background-color: #5b23ff;
+  border-radius: 0.8rem;
+  color: white;
+}
+
+.new-task-text {
+  min-height: 300px;
+  background-color: white;
+  border-radius: 0.8rem;
+  margin-top: 2.4rem;
+  padding: 1.4rem;
+  font-size: 1.6rem;
+  line-height: 2.2rem;
+}
+
+.new-task-header {
+  margin-bottom: 1.8rem;
+}
+
+.go-back-link {
+  text-decoration: none;
+  position: absolute;
+  top: 68%;
+  font-size: 1.3rem;
+  color: black;
+}
+
+.new-task-btn {
+  position: fixed;
+  bottom: 8rem;
+  right: 2rem;
+  font-size: 2.6rem;
+  border-radius: 100%;
+  border: 1px solid black;
+  padding: 1.4rem 1.6rem;
+  background-color: #5b23ff;
+  color: white;
+}
+.new-task-btn > a {
+  text-decoration: none;
+  color: white;
 }

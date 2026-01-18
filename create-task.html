@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="reset.css" />
+    <link rel="stylesheet" href="styles.css" />
+    <script
+      src="https://kit.fontawesome.com/9680ed3927.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <title>New Task</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <nav class="navbar-mobile">
+        <ul>
+          <li>
+            <a href="/index.html">
+              <i class="fa-solid fa-house"></i>
+              <span>HOME</span>
+            </a>
+          </li>
+          <li>
+            <a href="/calendar.html">
+              <i class="fa-solid fa-calendar-days"></i>
+              <span>CALENDAR</span>
+            </a>
+          </li>
+          <li>
+            <a href="/profile.html">
+              <i class="fa-solid fa-user"></i>
+              <span>PROFILE</span>
+            </a>
+          </li>
+          <li>
+            <a href="/settings.html">
+              <i class="fa-solid fa-gear"></i>
+              <span>SETTINGS</span>
+            </a>
+          </li>
+          <li>
+            <a href="/search-modal.html">
+              <i class="fa-solid fa-magnifying-glass"></i>
+              <span>SEARCH</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+
+      <header class="new-task-header">
+        <div class="go-back-link">
+          <a href="/index.html" class="go-back-task">
+            <i class="fa-solid fa-chevron-left"></i> go back</a
+          >
+        </div>
+       <h1>New Task</h1>
+      </header>
+      <hr />
+      <section class="basic-info-selection">
+        <div>
+            <input class="new-task-title" type="text" placeholder="Title">
+        </div>
+        <div class="due-date-selection">
+            <button>Due Date <i class="fa-solid fa-calendar-days"></i></button>
+       
+              
+              <span><i class="fa-solid fa-calendar-days"></i> 23.9.26</span>
+          
+        
+           
+            <span><i class="fa-regular fa-clock"></i> 14.00-16.00</span>
+       
+        </div>
+        <div class="tag-selection">
+            <button>Tag <i class="fa-solid fa-tag"></i></button>
+            <span class="selected-tag">Cooking</span>
+        </div>
+      </section>
+      <hr />
+      <section class="new-task-text">
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Error
+          provident, expedita sequi dicta, rerum quam mollitia molestias id
+          omnis quia deleniti. Ipsa voluptatem dolorum deserunt?
+        </p>
+      </section>
+      <section class="new-task-buttons-section">
+        <button class="cancel-button">
+          Cancel
+        </button>
+        <button class="create-button">
+          <i class="fa-solid fa-plus"></i>
+          Create
+        </button>
+      </section>
+    </div>
+  </body>
+</html>

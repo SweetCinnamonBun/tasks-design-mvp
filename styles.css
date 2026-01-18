@@ -14,6 +14,8 @@ body {
   padding-inline: 1rem;
 }
 
+/* Search modal */
+
 .overlay {
   position: fixed;
   inset: 0;
@@ -101,6 +103,7 @@ body {
   left: 0;
   width: 100%;
   box-sizing: border-box;
+  z-index: 30;
 }
 .navbar-mobile > ul {
   display: flex;
@@ -148,7 +151,7 @@ header > h1 {
 .progress {
   width: 192px;
   height: 161px;
-  background-color: white;
+ 
   border-radius: 100%;
   display: flex;
   flex-direction: column;
@@ -156,6 +159,8 @@ header > h1 {
   justify-content: center;
   padding-top: 1.4rem;
   position: relative;
+  background-color: white;
+  box-shadow: 1px 1px  6px rgb(87, 86, 86);
 }
 
 .completion-percentage {
@@ -214,6 +219,11 @@ header > h1 {
   border: 1px solid rgb(226, 225, 225);
 }
 
+.card > a {
+    text-decoration: none;
+    color: black;
+}
+
 .card-upper-section {
   display: flex;
   justify-content: space-between;
@@ -241,7 +251,7 @@ header > h1 {
 }
 
 .status-color {
-  background-color: red;
+  background-color: rgb(247, 48, 48);
   width: 1rem;
   height: 1rem;
   border-radius: 100%;
@@ -249,7 +259,7 @@ header > h1 {
   margin-top: 0.1rem;
 }
 .status-color-completed {
-  background-color: green;
+  background-color: rgb(21, 177, 21);
   width: 1rem;
   height: 1rem;
   border-radius: 100%;
@@ -488,7 +498,7 @@ header > h1 {
 }
 
 .task-text {
-  min-height: 390px;
+  min-height: 280px;
   background-color: white;
   border-radius: 0.8rem;
   margin-top: 2.4rem;

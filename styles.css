@@ -786,3 +786,11 @@ header > h1 {
   border-radius: 0.8rem;
   border: none;
 }
+
+@media (min-width: 700px) {
+  .navbar-mobile > ul {
+    max-width: 700px;
+    margin: auto;
+  }
+
+}

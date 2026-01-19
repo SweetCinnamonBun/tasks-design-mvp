@@ -32,6 +32,16 @@ button {
   justify-content: end;
 }
 
+.overlay-for-smaller-modal {
+   position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.555);
+  z-index: 20;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
 .search-modal {
   background-color: white;
   height: 94%;
@@ -621,7 +631,7 @@ header > h1 {
 }
 
 .due-date-selection {
-  font-size: 1.6rem;
+  font-size: 1.4rem;
 }
 
 .due-date-selection span {
@@ -631,16 +641,20 @@ header > h1 {
 }
 
 .due-date-selection > button {
-  font-size: 1.6rem;
+  font-size: 1.4rem;
   padding: 0.8rem 1.2rem;
   border: none;
   background-color: #5b23ff;
   color: white;
   border-radius: 0.8rem;
 }
+.due-date-selection > button > a {
+  color: white;
+  text-decoration: none;
+}
 
 .tag-selection {
-  font-size: 1.6rem;
+  font-size: 1.4rem;
 }
 .tag-selection > span {
   background-color: white;
@@ -649,7 +663,7 @@ header > h1 {
   margin-left: 0.6rem;
 }
 .tag-selection > button {
-  font-size: 1.6rem;
+  font-size: 1.4rem;
   padding: 0.8rem 1.2rem;
   border: none;
   background-color: #5b23ff;
@@ -708,4 +722,67 @@ header > h1 {
 .new-task-btn > a {
   text-decoration: none;
   color: white;
+}
+
+
+
+
+.popup-modal {
+  background-color: white;
+  height: 66%;
+  border-radius: 1.4rem;
+  padding-inline: 1.4rem;
+}
+
+.close-btn {
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+  font-size: 2rem;
+  text-align: end;
+  padding-right: 2rem;
+}
+
+.close-btn > a {
+    text-decoration: none;
+    color: black;
+}
+
+
+
+.popup-modal-heading {
+  font-size: 2.2rem;
+}
+
+.datetime-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 70%;
+}
+
+.datetime-wrapper {
+  background-color: #ccbdf6;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  padding: 3.2rem;
+  border-radius: 0.8rem;
+}
+
+.datetime-container  .selection-field {
+  font-size: 2rem;
+}
+
+.selection-field > label {
+  display: flex;
+  flex-direction: column;
+   align-items: center;
+   gap: 1.6rem;
+}
+
+.selection-field > label > input {
+  padding: 1.4rem 1.8rem;
+  border-radius: 0.8rem;
+  border: none;
 }

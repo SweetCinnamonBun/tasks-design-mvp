@@ -5,13 +5,19 @@ html {
 
 body {
   min-height: 100vh;
-  background-color: #d1f7c2;
+ background-color: #c7ffb0;
   padding-bottom: 16rem;
 }
 
 .wrapper {
   min-height: 100vh;
   padding-inline: 1rem;
+  max-width: 700px;
+  margin: auto;
+}
+
+button {
+  cursor: pointer;
 }
 
 /* Search modal */
@@ -191,11 +197,12 @@ header > h1 {
 
 .todays-tasks-section {
   margin-top: 4rem;
+ 
 }
 
 .todays-tasks-section h3 {
   font-size: 2rem;
-  margin-bottom: 2.2rem;
+
 }
 
 .task-status {
@@ -287,7 +294,7 @@ header > h1 {
 .mark-as-complete-btn {
   background-color: #5b23ff;
   border: none;
-  padding: 1rem 1.2rem;
+  padding: 1rem 1.4rem;
   border-radius: 100%;
   box-shadow: 0.5px 0.5px 4px rgb(105, 105, 105);
   color: white;
@@ -379,7 +386,6 @@ header > h1 {
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: 0.1s linear;
   border-radius: 8px;
 }
 
@@ -396,20 +402,72 @@ header > h1 {
   color: white;
 }
 
-.calendar .important a {
+.calendar .upcoming a {
   position: relative;
 }
 
-.calendar .important a::after {
+.calendar .selected {
+  border: 4px solid #5b23ff;
+}
+
+.calendar .upcoming a::after {
   content: "";
   position: absolute;
   top: 16px;
-  right: 6px;
+  right: 27%;
   width: 6px;
   height: 6px;
   border-radius: 50%;
   background-color: #e73a06;
 }
+.calendar .completed a {
+  position: relative;
+}
+
+.calendar .completed a::after {
+  content: "";
+  position: absolute;
+  top: 16px;
+  right: 27%;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: #1eae00;
+}
+
+.home-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+}
+
+.nav-buttons {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.nav-buttons > * {
+  font-size: 2rem;
+  border: none;
+  padding: 0.6rem 1.8rem;
+  background-color: white;
+  border-radius: 0.8rem;
+  box-shadow: 1px 1px 1px gray;
+}
+
+.filter-btn {
+  font-size: 2rem;
+  cursor: pointer;
+  border-radius: 0.8rem;
+  border: none;
+  background-color: white;
+  box-shadow: 1px 1px 1px rgb(151, 150, 150);
+  padding: 1rem 1.2rem;
+}
+
+
 
 .calendar-header {
   display: flex;
@@ -423,12 +481,7 @@ header > h1 {
   padding: 0.8rem 1rem;
   border-radius: 0.8rem;
 }
-.calendar-header i {
-  font-size: 2rem;
-  background-color: white;
-  padding: 1rem 1.2rem;
-  border-radius: 0.8rem;
-}
+
 
 .go-back {
   text-decoration: none;
@@ -647,7 +700,7 @@ header > h1 {
   right: 2rem;
   font-size: 2.6rem;
   border-radius: 100%;
-  border: 1px solid black;
+  border: none;
   padding: 1.4rem 1.6rem;
   background-color: #5b23ff;
   color: white;

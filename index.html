@@ -66,9 +66,16 @@
         </div>
       </section>
       <section class="todays-tasks-section">
-         <div class="calendar-header">
+         <div class="home-header">
             <h3>Today's tasks</h3>
-            <i class="fa-solid fa-arrow-down-wide-short"></i>
+            <div class="nav-buttons">
+              <button class="nav-button">
+                <i class="fa-solid fa-chevron-left"></i>
+              </button>
+              <button class="nav-button">
+                <i class="fa-solid fa-chevron-right"></i>
+              </button>
+            </div>
         </div>
         <div>
           <p class="task-status">Incomplete tasks:</p>
@@ -142,32 +149,36 @@
           <p class="task-status-completed">Completed tasks:</p>
           <div class="tasks-container">
             <div class="card">
-              <div class="card-upper-section">
-                <div>
-                  <h5 class="card-title">UX & UI design homework and group project coding</h5>
-                  <span class="tag">study</span>
+              <a href="/task.html">
+                <div class="card-upper-section">
+                  <div>
+                    <h5 class="card-title">UX & UI design homework and group project coding</h5>
+                    <span class="tag">study</span>
+                  </div>
+                  <div class="card-status-container">
+                    <div class="status-color-completed"></div>
+                    <span class="card-status">Completed</span>
+                  </div>
                 </div>
-                <div class="card-status-container">
-                  <div class="status-color-completed"></div>
-                  <span class="card-status">Completed</span>
+                <div class="extra-div">
+                  
                 </div>
-              </div>
-              <div class="extra-div">
-                
-              </div>
+              </a>
             </div>
             <div class="card">
-              <div class="card-upper-section">
-                <div>
-                  <h5 class="card-title">Cooking dinner</h5>
-                  <span class="tag">Cooking</span>
+              <a href="/task.html">
+                <div class="card-upper-section">
+                  <div>
+                    <h5 class="card-title">Cooking dinner</h5>
+                    <span class="tag">Cooking</span>
+                  </div>
+                  <div class="card-status-container">
+                    <div class="status-color-completed"></div>
+                    <span class="card-status">Completed</span>
+                  </div>
                 </div>
-                <div class="card-status-container">
-                  <div class="status-color-completed"></div>
-                  <span class="card-status">Completed</span>
-                </div>
-              </div>
-              <div class="extra-div"></div>
+                <div class="extra-div"></div>
+              </a>
             </div>
           </div>
         </div>

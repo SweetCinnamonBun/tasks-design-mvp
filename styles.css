@@ -12,7 +12,7 @@ body {
 .wrapper {
   min-height: 100vh;
   padding-inline: 1rem;
-  max-width: 700px;
+  max-width: 900px;
   margin: auto;
 }
 
@@ -207,8 +207,10 @@ header > h1 {
 
 .todays-tasks-section {
   margin-top: 4rem;
- 
+  
 }
+
+
 
 .todays-tasks-section h3 {
   font-size: 2rem;
@@ -787,6 +789,21 @@ header > h1 {
   border: none;
 }
 
+.extra-div {
+  text-align: end;
+  padding-bottom: 2rem;
+}
+
+.extra-div > * {
+   background-color: #fc6a6a;
+  border: none;
+  padding: 1rem 1.4rem;
+  border-radius: 100%;
+  box-shadow: 0.5px 0.5px 4px rgb(105, 105, 105);
+  color: white;
+  margin-right: 1rem;
+}
+
 .add-datetime {
   padding: 0.8rem 2.6rem;
   background-color:#5b23ff;
@@ -802,4 +819,16 @@ header > h1 {
     margin: auto;
   }
 
+}
+
+@media (min-width: 900px) {
+  .tasks-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 2rem;
+}
+
+.task-status-completed {
+margin-top: 0;
+}
 }
